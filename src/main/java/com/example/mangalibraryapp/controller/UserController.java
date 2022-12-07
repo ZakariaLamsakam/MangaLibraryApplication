@@ -9,6 +9,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 
+import java.util.List;
+
 @Controller
 public class UserController {
 
@@ -40,6 +42,25 @@ public class UserController {
 
         return "register_success";
     }
+
+    @GetMapping("/home")
+    public String homePage(Model model){
+        model.addAttribute("user", new User());
+        return "home";
+    }
+
+    @GetMapping("/list_users")
+    public String viewUsersList(Model model){
+        List<User> listUsers = service.getAllUsers();
+        model.addAttribute("listUsers",listUsers);
+
+        return "profile";
+    }
+
+
+
+
+
 
 
 }
