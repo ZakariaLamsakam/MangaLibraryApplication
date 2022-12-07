@@ -21,6 +21,10 @@
     <h1>Add Manga</h1>
   </div>
   <div>
+    <div class="card-body">
+      <p class="card-text">It is not possible to add the same manga twice
+      </p>
+    </div>
     <form th:action = "@{/library}" th:object="${manga}" method="POST" style="max-width: 600px; margin: 0 auto;">
       <div class="m-3">
         <div class="form-group row">
