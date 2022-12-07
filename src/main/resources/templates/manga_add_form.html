@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th ="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Register</title>
+  <link rel="stylesheet" type="text/css" href="/webjars/bootstrap/css/bootstrap.min.css" />
+  <style>
+    body {
+      background: url("https://static.vecteezy.com/system/resources/previews/002/309/794/non_2x/geometric-white-background-free-vector.jpg") no-repeat center center fixed;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container text-center">
+  <div>
+    <h1>Add Manga</h1>
+  </div>
+  <div>
+    <form th:action = "@{/library}" th:object="${manga}" method="POST" style="max-width: 600px; margin: 0 auto;">
+      <div class="m-3">
+        <div class="form-group row">
+          <label class="col-form-label col-4">Username</label>
+          <div class="col-8">
+            <input type="text" class="form-control" th:field="*{username}" required
+                   minlength="2"maxlength="45">
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <label class="col-form-label col-4">Manga</label>
+          <div class="col-8">
+            <input type="text" class="form-control" th:field="*{name}" required
+                   minlength="2"maxlength="80">
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <label class="col-form-label col-4">Mangaka</label>
+          <div class="col-8">
+            <input type="text" class="form-control" th:field="*{mangaka}" required
+                   minlength="1" maxlength="40">
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <label class="col-form-label col-4">Genre</label>
+          <div class="col-8">
+            <input type="text" class="form-control" th:field="*{genre}" required
+                   minlength="1" maxlength="500">
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <label class="col-form-label col-4">Volume</label>
+          <div class="col-8">
+            <input type="text" class="form-control" th:field="*{volume}" required
+                   minlength="1" maxlength="20">
+          </div>
+        </div>
+
+        <div class="text-center">
+          <button type="submit" class="btn btn-primary btn-dark m-2" >Save</button>
+          <button type="submit" class="btn btn-secondary btn-dark m-2" onclick="cancelForm()">Cancel</button>
+        </div>
+      </div>
+    </form>
+    <script type="text/javascript">
+      function cancelForm(){
+        window.location="[[@{/library}]]"
+      }
+    </script>
+  </div>
+</div>
+
+</body>
+</html>
