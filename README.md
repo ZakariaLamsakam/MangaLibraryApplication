@@ -2,7 +2,9 @@
 
 
 Project : MangaLibraryApplication
-Titel Project: Het is mogelijk om een account aan te maken. Elke user heeft een profiel pagina waar het mogelijk 
+
+Titel Project: 
+Het is mogelijk om een account aan te maken. Elke user heeft een profiel pagina waar het mogelijk 
 is om zijn data te veranderen. Er is ook een pagina waar alle actieve users te zien zijn in een globale user lijst. 
 Elke user heeft een bibliotheek waar het mogelijk is om de beste manga’s toe te voegen. Het is mogelijk om manga’s 
 toe te voegen, te editen, te verwijderen. Het is een gemeenschappelijke lijst waar alle users de top manga’s van 
