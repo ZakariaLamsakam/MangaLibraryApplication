@@ -1,6 +1,5 @@
 # MangaLibraryApplication
 
-
 Project : MangaLibraryApplication
 
 Titel Project: 
