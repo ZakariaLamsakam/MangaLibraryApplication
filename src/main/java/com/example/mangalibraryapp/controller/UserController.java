@@ -72,16 +72,21 @@ public class UserController {
         return "user_edit_form";
     }
 
+    @PostMapping("/profile/{id}")
+    public String updateUser(@PathVariable long id,
+                             @ModelAttribute("user") User user, Model model){
 
+        //get student from databse from id
+        User existingUser = service.getUserById(id);
+        existingUser.setId(id);
+        existingUser.setFirstName(user.getFirstName());
+        existingUser.setLastName(user.getLastName());
+        existingUser.setEmail(user.getEmail());
 
-
-
-
-
-
-
-
-
+        //save updated student object
+        service.updateUser(existingUser);
+        return "redirect:/profile";
+    }
 
 
 }
