@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html  lang="en" xmlns:th="http://www.thymeleaf.org"
-       xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5" xmlns:text="http://www.w3.org/1999/xhtml">
 
 <head>
   <meta charset="ISO-8859-1">
@@ -9,12 +9,21 @@
   <script type="text/javascript" src="/webjars/jquery/jquery.min.js"></script>
   <script type="text/javascript" src="/webjars/bootstrap/js/bootstrap.min.js"></script>
 
+  <style>
+    body {
+      background: url("https://static.vecteezy.com/system/resources/previews/002/309/794/non_2x/geometric-white-background-free-vector.jpg") no-repeat center center fixed;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+    }
+  </style>
 </head>
 <body>
 <div class="container text-left">
   <div>
     <nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark">
-      <img src="http://3.bp.blogspot.com/-0HrCixGChEY/T7NG8D734XI/AAAAAAAAAcI/xMOk81LNy60/s1600/Cover.jpg" width="50" height="50">
+      <img src="http://kyohon.com/wp-content/uploads/2018/02/KyoHon-Logo-carr%C3%A9-horizontal-final-500x440.jpg" width="50" height="50">
       <br>
       <a class="navbar-brand" href="#">Manga Library</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -39,9 +48,72 @@
       </div>
     </nav>
   </div>
-
   <br><br>
+  <div class="card text-center">
+    <div class="card-body">
+      <h5 class="card-title">Animes</h5>
+      <p class="card-text">Besides manga's there are also animes which are animated series or
+        animated films often adapted from a manga. Here are some examples
+      </p>
+    </div>
+  </div>
+  <br><br>
+  <div class="row row-cols-1 row-cols-md-3 g-4">
+    <div class="col">
+      <div class="card h-150">
+        <img src="https://pbs.twimg.com/media/E4ZkdV9XEAYl7cR.jpg" class="card-img-top"  width="200" height="200">
+        <div class="card-body">
+          <h5 class="card-title">Demon Slayer</h5>
+          <p class="card-text">It is a Japanese manga series written and illustrated by Koyoharu Got?ge,
+            and it is about Tanjiro Kamado, a young boy who becomes a demon slayer after his family is
+            slaughtered and his younger sister Nezuko is turned into a demon.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card h-150">
+        <img src="https://img.olhardigital.com.br/wp-content/uploads/2021/09/one-piece-scaled.jpg" class="card-img-top" width="200" height="200">
+        <div class="card-body">
+          <h5 class="card-title">One Piece</h5>
+          <p class="card-text">The story follows the adventures of Monkey D. Luffy, a boy whose body gained
+            the properties of rubber after unintentionally eating a Devil Fruit</p>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card h-150">
+        <img src="https://external-preview.redd.it/DRVdBssM1CokGF8z7kArkmPFzY7FfJtb6ABD1zbFKtI.jpg?auto=webp&s=45438a564b533a61f4e573ac9ea8519f8c2efd4a" width="200" height="200" class="card-img-top" >
+        <div class="card-body">
+          <h5 class="card-title">My Hero Academia</h5>
+          <p class="card-text">Born without special powers in a world where 80% of the population has them,
+            Izuku Midoriya still dreams of becoming a hero.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card h-150">
+        <img src="https://www.cheatsheet.com/wp-content/uploads/2022/08/Chainsaw-Man-Anime.jpg" class="card-img-top" width="200" height="200">
+        <div class="card-body">
+          <h5 class="card-title">Chainsaw man</h5>
+          <p class="card-text">Following a betrayal, a young man left for the dead is reborn as a powerful
+            devil-human hybrid after merging with his pet devil and is soon enlisted into an organization
+            dedicated to hunting devils.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card h-150">
+        <img src="https://pictures.betaseries.com/fonds/poster/ebf66b338757fadbe76e87e79ed4b207.jpg" class="card-img-top" width="200" height="200">
+        <div class="card-body">
+          <h5 class="card-title">Hajime No Ippo</h5>
+          <p class="card-text">It follows the story of high school student Makunouchi Ippo, as he begins his
+            career in boxing and over time obtains many titles and defeats various opponents.</p>
+        </div>
+      </div>
+    </div>
 
+  </div>
+  <br><br>
   <div>
     <form th:action="@{/logout}" method="post">
       <button type="submit" class="btn btn-dark" value="Sign Out">Logout</button>

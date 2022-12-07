@@ -4,6 +4,15 @@
     <meta charset="UTF-8">
   <title>Start Page</title>
   <link rel="stylesheet" type="text/css" href="/webjars/bootstrap/css/bootstrap.min.css" />
+    <style>
+        body {
+            background: url("https://static.vecteezy.com/system/resources/previews/002/309/794/non_2x/geometric-white-background-free-vector.jpg") no-repeat center center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
+    </style>
 </head>
 <body>
 
@@ -11,6 +20,22 @@
     <div>
         <h1>Welcome to Top Manga's Library</h1>
     </div>
+    <br><br>
+    <div>
+        <div class="card mb-3">
+            <img src="https://st2.depositphotos.com/4741067/7734/i/950/depositphotos_77348232-stock-photo-rows-of-colorful-manga-books.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">What we offer</h5>
+                <p class="card-text">You have read a lot of manga and you want
+                    to share your best manga's with the great community of manga
+                    readers or you are new in the community and you want to know
+                    what are the best manga's according to the community and why.
+                    Look no further and join top manga's community.</small></p>
+            </div>
+        </div>
+    </div>
+    <br><br>
+    <div>
         <h2><a th:href= "@{/register} " style="color: black">Register</a></h2>
         <h2><a th:href="@{/login}" style="color: black">Login</a></h2>
     </div>
