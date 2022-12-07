@@ -1,21 +1,20 @@
 <!DOCTYPE html>
-<html  lang="en" xmlns:th="http://www.thymeleaf.org"
-       xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
-
+<html lang="en" xmlns:th ="http://www.thymeleaf.org">
 <head>
-  <meta charset="ISO-8859-1">
-  <title>List Users</title>
+  <meta charset="UTF-8">
+  <title>List Of Users</title>
   <link rel="stylesheet" type="text/css" href="/webjars/bootstrap/css/bootstrap.min.css" />
   <script type="text/javascript" src="/webjars/jquery/jquery.min.js"></script>
   <script type="text/javascript" src="/webjars/bootstrap/js/bootstrap.min.js"></script>
 
 </head>
 <body>
+
 <div class="container text-left">
+
   <div>
-    <nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <img src="http://3.bp.blogspot.com/-0HrCixGChEY/T7NG8D734XI/AAAAAAAAAcI/xMOk81LNy60/s1600/Cover.jpg" width="50" height="50">
-      <br>
       <a class="navbar-brand" href="#">Manga Library</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -24,13 +23,13 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="#">List Users <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" th:href="@{/home}">Home</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" th:href="@{/profile}">Profile</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" th:href="@{/list_users}">List Users</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" th:href="@{/library}">Manga Library</a>
@@ -39,15 +38,33 @@
       </div>
     </nav>
   </div>
-
   <br><br>
-
   <div>
-    <form th:action="@{/logout}" method="post">
-      <button type="submit" class="btn btn-dark" value="Sign Out">Logout</button>
-    </form>
+    <h1>List of Users</h1>
   </div>
 
+  <div>
+    <table class="table table-striped table-bordered">
+      <thead class="thead-dark">
+
+      <tr>
+        <th>User ID</th>
+        <th>E-mail</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr th:each="user: ${listUsers}">
+        <td th:text="${user.id}">User ID</td>
+        <td th:text="${user.email}">E-mail</td>
+        <td th:text="${user.firstName}">First Name</td>
+        <td th:text="${user.lastName}">Last Name</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
 </div>
+
 </body>
 </html>

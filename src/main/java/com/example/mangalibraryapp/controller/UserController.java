@@ -7,6 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
@@ -58,11 +59,20 @@ public class UserController {
        return "profile";
    }
 
+    @GetMapping("/list_users")
+    public String viewUsersLIst(Model model){
+        List<User> listUsers = service.getAllUsers();
+        model.addAttribute("listUsers", listUsers);
+        return "list_users";
+    }
+
     @GetMapping("/profile/edit/{id}")
     public String editUser(@PathVariable Long id, Model model){
         model.addAttribute("user",service.getUserById(id));
         return "user_edit_form";
     }
+
+
 
 
 
