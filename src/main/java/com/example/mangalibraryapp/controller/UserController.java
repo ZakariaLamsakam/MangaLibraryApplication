@@ -49,13 +49,15 @@ public class UserController {
         return "home";
     }
 
-    @GetMapping("/list_users")
-    public String viewUsersList(Model model){
-        List<User> listUsers = service.getAllUsers();
-        model.addAttribute("listUsers",listUsers);
+   @GetMapping("/profile")
+    public String ProfilePage(Model model){
+       List<User> listUsers = service.getAllUsers();
+       model.addAttribute("listUsers", listUsers);
 
-        return "profile";
-    }
+       return "profile";
+   }
+
+
 
 
 

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<head>
+  <meta charset="UTF-8">
+  <title>Profile</title>
+  <link rel="stylesheet" type="text/css" href="/webjars/bootstrap/css/bootstrap.min.css" />
+  <script type="text/javascript" src="/webjars/jquery/jquery.min.js"></script>
+  <script type="text/javascript" src="/webjars/bootstrap/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+
+<div class="container text-left">
+  <div>
+    <h1 style="font-size: 16px"> Welcome to your profile</h1>
+  </div>
+
+  <div>
+    <p>
+      E-mail:<span class="nav-link" sec:authentication="principal.username"></span>
+      encrypted password:<span class="nav-link" sec:authentication="principal.password"></span>
+    </p>
+  </div>
+
+  <th:block th:each="user : ${listUsers}">
+    <form th:action="@{'/profile/edit/' + ${user.id}}">
+      <button type="submit" class="btn btn-dark" value="Edit Profile">Edit Profile</button>
+    </form>
+  </th:block>
+  <!-- <div>
+      <form th:action="@{'/profile/edit/' + ${user.id}}">
+          <button type="submit" class="btn btn-dark" value="Edit Profile">Edit Profile</button>
+      </form>
+  </div>-->
+</div>
+
+</body>
+</html>
