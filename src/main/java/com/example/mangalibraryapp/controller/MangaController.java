@@ -4,6 +4,7 @@ import com.example.mangalibraryapp.entity.Manga;
 import com.example.mangalibraryapp.repository.MangaRepository;
 import com.example.mangalibraryapp.service.MangaService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -12,6 +13,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 
 import java.util.List;
 
+@Controller
 public class MangaController {
 
     @Autowired

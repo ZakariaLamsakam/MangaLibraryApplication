@@ -3,9 +3,11 @@ package com.example.mangalibraryapp.service.impl;
 import com.example.mangalibraryapp.entity.Manga;
 import com.example.mangalibraryapp.repository.MangaRepository;
 import com.example.mangalibraryapp.service.MangaService;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public class MangaServiceImpl implements MangaService {
 
     private MangaRepository mangaRepository;
