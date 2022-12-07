@@ -16,8 +16,8 @@ Bootstrap, HTML, MySQL, Hibernate
 Nieuwe Technologie: 
 Spring boot, Spring bCryptPasswordEncoder,Thymleaf, AssertJ, Webscaper, Jsoup 
 Specifieke spring boot technologieën:
-Spring Data JPA 
-Spring Web MVC 
+Spring Data JPA, 
+Spring Web MVC, 
 Spring security 
 
 Beschrijving:
