@@ -8,9 +8,9 @@ public interface MangaService {
 
     List<Manga> getAllManga();
 
-    Manga saveMange(Manga manga);
+    Manga saveManga(Manga manga);
 
-    Manga getMangeById(Long id);
+    Manga getMangaById(Long id);
 
     Manga updateManga(Manga manga);
 

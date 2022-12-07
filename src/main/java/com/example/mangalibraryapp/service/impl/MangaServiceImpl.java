@@ -21,12 +21,12 @@ public class MangaServiceImpl implements MangaService {
     }
 
     @Override
-    public Manga saveMange(Manga manga) {
+    public Manga saveManga(Manga manga) {
         return mangaRepository.save(manga);
     }
 
     @Override
-    public Manga getMangeById(Long id) {
+    public Manga getMangaById(Long id) {
         return mangaRepository.findById(id).get();
     }
 
